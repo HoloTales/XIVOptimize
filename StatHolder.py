@@ -12,6 +12,7 @@ class StatMods:
     chd = None
     detmod = None
     wd = None
+    atk = None
 
     def __init__(self, determination, crit, directhit, weapondamage):
         self.mods = Level_Mods()
@@ -26,8 +27,8 @@ class StatMods:
 
         self.wd = math.floor(((self.mods.getMainMod(80)*self.mods.getJobMainstatMod(80))/1000)+weapondamage)
 
-        print(self.chr, self.chd, self.dhr,  self.detmod)
+        self.atk = math.floor((165*(weapondamage-340))/340)+100
 
-    def potency(self, potency):
-        attackpower = math.floor((165*(potency-340))/340)+100
+
+        print(self.chr, self.chd, self.dhr,  self.detmod)
 
