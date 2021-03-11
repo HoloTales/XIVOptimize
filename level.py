@@ -11,6 +11,7 @@ class Level_Mods:
         race_mods = pandas.read_csv("./mods/racemods.csv")
 
 
+    #todo alter per level (use pandas)
     def getMainMod(self, level):
         return 340
 
@@ -19,3 +20,6 @@ class Level_Mods:
 
     def getSubMod(self, level):
         return 380
+
+    def getJobMainstatMod(self, param):
+        return 100
